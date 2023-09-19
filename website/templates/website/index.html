@@ -1,0 +1,13 @@
+
+{% load static %}
+{% if latest_GeneralInformation_list %}
+    <ul>
+    {% for user in latest_GeneralInformation_list %}
+        {% comment %} <li><a href="/polls/{{ question.id }}/" >{{ question.question_text }}</a></li> {% endcomment %}
+        {% comment %} question is coming from for loop {% endcomment %}
+        <li> <a href="{% url 'website:General-Information' user.id %}">{{ user.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Users are available.</p>
+{% endif %}
