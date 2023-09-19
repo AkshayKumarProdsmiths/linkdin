@@ -1,0 +1,44 @@
+
+<h2>Name:                  {{ user.name }}</h2>
+<h2>Student_at:            {{ user.student_at }}</h2>
+<h2>Connections:           {{ user.connections }}</h2>
+<h2>profile_language:      {{ user.profile_language }}</h2>
+<h2>public_profile_url:    {{ user.public_profile_url }}</h2>
+
+<h3>Resources</h3>
+<ul>
+    {% for resource in resources %}
+        <li>{{ resource.creator_mode }} </li> 
+        <li> {{ resource.creator_description }}</li>
+        <li>{{resource.my_network}}</li>
+    {% endfor %}
+</ul>
+
+<h2>Education</h2>
+<ul>
+    {% for resource in education %}
+    <li>qualification:  {{ resource.qualification }} </li>
+    <li> college_name: {{ resource.college_name}} </li>
+    <li>branch: {{ resource.branch }} </li>
+    <li>time_period: {{ resource.time_period }} </li>
+    <li>city:  {{ resource.city }} </li>
+    <li>state:  {{ resource.state }} </li>
+    <li>country:  {{ resource.country }} </li>
+    {% endfor %}
+</ul>
+
+<h2>LicensesCertifications</h2>
+<ul>
+    {% for resource in certifrcate%}
+    <li>name:  {{ resource.name }} </li>
+    <li>organisation: {{ resource.organisation}} </li>
+    {%endfor%}
+</ul>
+
+<h2>Skills</h2>
+<ul>
+    {% for resource in skills%}
+    <li>name:  {{ resource.name }} </li>
+    <li>assesment: {{ resource.assesment}} </li>
+    {%endfor%}
+</ul>

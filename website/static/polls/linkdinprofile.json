@@ -1,0 +1,104 @@
+{
+    "general_information": {
+        "name": "Akshay",
+        "student_at": "Sant Longowal Institute of Engineering & Technology",
+        "connections": "285",
+        "profile_language": "English",
+        "public_profile_url": "www.linkedin.com/in/akshaykumar8544749906"
+    },
+    "resources": {
+        "creator_mode": "Off",
+        "creator_description": "Get discovered, showcase content on your profile, and get access to creator toolsGet discovered, showcase content on your profile, and get access to creator tools",
+        "my_network": "See and manage your connections and interests.See and manage your connections and interests."
+    },
+    "education": [
+        {
+            "qualification": "B.tec",
+            "college_name": "Sant Longowal Institute of Engineering & Technology",
+            "branch": "Electronics and Communication Engineering",
+            "time_period": "2019-2022",
+            "address": {
+                "city": "Longowal",
+                "state": "Punjab",
+                "country": "India"
+            }
+        },
+        {
+            "qualification": "Engineering Diploma",
+            "college_name": "Govt. Polytechnic Kangra",
+            "branch": "Electronics and Communication Engineering",
+            "time_period": "2016-2018",
+            "address": {
+                "city": "Kangra",
+                "state": "Himachal Pradesh",
+                "country": "India"
+            }
+        }
+    ],
+    "licenses_certifications": [
+        {
+            "name": "Ready, Set, Agile! Virtual Experience Program",
+            "organisation": "Cognizant"
+        },
+        {
+            "name": "Recent Trends of RF Technology",
+            "organisation": "Sant Longowal Institute of Engineering and Technology"
+        },
+        {
+            "name": "Power Bi Masters",
+            "organisation": "Physics Wala Skills"
+        },
+        {
+            "name": "Certificate of Participation",
+            "organisation": "IIT Bombay"
+        }
+    ],
+    "skills": [
+        "HTML",
+        "CSS",
+        "C",
+        "JAVASCRIPT",
+        "Git",
+        "OOPS",
+        "NODE JS",
+        "SQL"
+    ],
+    "people_also_viewed": [
+        {
+            "name": "Ishu Shukralia",
+            "college": "Sant Longowal Institute of Engineering & Technology",
+            "connections": ""
+        },
+        {
+            "name": "Sachchidanand Prasad",
+            "college": " Welding Engineer",
+            "connections": ""
+        }
+    ],
+    "people_you_may_viewed": [
+        {
+            "name": "Sarika -Sarika",
+            "desc": "sliet || Food technologistsliet",
+            "mutual_connections": ""
+        },
+        {
+            "name": "Gaurav Kumar",
+            "desc": "Master's degree at Management education research institute ",
+            "mutual_connections": ""
+        }
+    ],
+    "interests": [
+        {
+            "name": "Guru Gopal Das",
+            "followers": "426,482"
+        },
+        {
+            "name": "Oracle",
+            "followers": "9,373,954"
+        },
+        {
+            "name": "Accenture",
+            "followers": "11,401,088"
+        }
+    ]
+}
