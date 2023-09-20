@@ -6,6 +6,6 @@ app_name = "website"
 urlpatterns = [
      path("", views.IndexView.as_view(), name="index"),
     #--------linkdin_profile---------
-    path('user/<int:pk>/', views.linkdinprofile.as_view(), name='General-Information')
-
+    path('user/<int:pk>/', views.linkdinprofile.as_view(), name='General-Information'),
+    path('add/', views.add_general_information, name='add_user')
 ]
