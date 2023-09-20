@@ -5,7 +5,10 @@
     {% for user in latest_GeneralInformation_list %}
         <li> <a href="{% url 'website:General-Information' user.id %}">{{ user.name }}</a></li>
     {% endfor %}
-    </ul>
+  </ul>
+  <li> <a href="{% url 'website:add_user' %}">Creat User</a></li>
 {% else %}
-    <p>No Users are available.</p>
+<ul>
+<p>No Users are available.</p>
+</ul>
 {% endif %}
