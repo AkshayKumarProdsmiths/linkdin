@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create User</title>
+</head>
+<body>
+    <h1>Create a New User</h1>
+    <form method="post" action="{% url 'website:create_user_api'  %}">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required><br><br>
+
+        <label for="student_at">student_at:</label>
+        <input type="text" name="student_at" id="student_at" required><br>
+
+        <label for="connections">connections:</label>
+        <input type="number" name="connections" id="connections" required><br>
+
+        <label for="profile_language">Profile Language:</label>
+        <input type="text" name="profile_language" id="profile_language" required><br>
+
+        <label for="public_profile_url">public_profile_url:</label>
+        <input type="text" name="public_profile_url" id="public_profile_url" required><br><br><br><br><br><br><br>
+
+        {% comment %} 
+
+        <label for="qualification">qualification:</label>
+        <input type="text" name="qualification" id="qualification" required><br>
+
+        <label for="college_name">college_name:</label>
+        <input type="text" name="college_name" id="college_name" required><br>
+
+        <label for="branch">branch:</label>
+        <input type="number" name="branch" id="branch" required><br>
+
+        <label for="time_period">time_period:</label>
+        <input type="text" name="time_period" id="time_period" required><br>
+
+        <label for="city">city:</label>
+        <input type="text" name="city" id="city" required><br>
+
+
+        <label for="state">state:</label>
+        <input type="text" name="state" id="state" required><br>
+
+        <label for="country">country:</label>
+        <input type="text" name="student_at" id="country" required><br>
+
+        <label for="user">user:</label>
+        <input type="number" name="user" id="user" required><br>
+
+        <label for="name">name:</label>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="public_profile_url">public_profile_url:</label>
+        <input type="text" name="public_profile_url" id="public_profile_url" required><br> 
+        {% endcomment %}
+        <input type="submit" value="Create User">
+    </form>
+</body>
+</html>
