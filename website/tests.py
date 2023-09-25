@@ -10,11 +10,34 @@ class GeneralInformationAPITest(TestCase):
         self.client = APIClient()
         self.url = reverse('website:generalinformation-list') 
 
+
     def test_get_general_information_list(self):
         GeneralInformation.objects.create(name="User1", student_at="School1", connections="10",
                                           profile_language="English", public_profile_url="https://example.com/user1")
-        GeneralInformation.objects.create(name="User2", student_at="School2", connections="20",
-                                          profile_language="Spanish", public_profile_url="https://example.com/user2")
+        # GeneralInformation.objects.create(name="User2", student_at="School2", connections="20",
+        #                                   profile_language="Spanish", public_profile_url="https://example.com/user2")
+
+    def test_create_general_information(self):
+        data = {
+            "name": "User3",
+            "student_at": "School3",
+            "connections": "30",
+            "profile_language": "French",
+            "public_profile_url": "https://example.com/user3",
+        }
+
+        response = self.client.post(self.url, data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+        
+        self.assertEqual(GeneralInformation.objects.count(), 1)
+
+       
+        self.assertEqual(response.data['name'], data['name'])
+        self.assertEqual(response.data['student_at'], data['student_at'])
+        self.assertEqual(response.data['connections'], data['connections'])
+        self.assertEqual(response.data['profile_language'], data['profile_language'])
+        self.assertEqual(response.data['public_profile_url'], data['public_profile_url'])
 
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
