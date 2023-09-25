@@ -1,27 +1,27 @@
 from rest_framework import serializers
 from .models import *
 
-class GeneralInformationSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = GeneralInformation
-        fields = '__all__'
 class EducationSerializer(serializers.ModelSerializer):
-    #forkey = GeneralInformationSerializer()
     class Meta:
         model = Education
         fields = '__all__'
 class AddressSerializer(serializers.ModelSerializer):
-    #forkey = GeneralInformationSerializer()
     class Meta:
         model = Address
         fields = '__all__'
 class LicensesCertificationsSerializer(serializers.ModelSerializer):
-    #forkey = GeneralInformationSerializer()
     class Meta:
         model = LicensesCertifications
         fields = '__all__'
 class PersonSerializer(serializers.ModelSerializer):
-    #forkey = GeneralInformationSerializer()
     class Meta:
         model = Person
         fields = '__all__'
+class GeneralInformationSerializer(serializers.ModelSerializer):
+    education_set = EducationSerializer(many=True)
+    address_set = AddressSerializer(many=True)
+    licenses_certifications = LicensesCertificationsSerializer(many=True, read_only=True)
+    person_set = PersonSerializer(many=True)
+    class Meta:
+        model = GeneralInformation
+        fields =  ['name','student_at','connections','profile_language','public_profile_url','education_set','address_set','licenses_certifications','person_set'] 
